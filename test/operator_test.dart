@@ -9,5 +9,11 @@ main() {
       int b = 6;
       expect(op.sum(a, b), 7);
     });
+
+    test('test sub function', () {
+      int a = 5;
+      int b = 2;
+      expect(op.sub(a, b), 3);
+    });
   });
 }
