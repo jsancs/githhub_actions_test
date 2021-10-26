@@ -9,4 +9,9 @@ import 'package:flutter_test/flutter_test.dart';
 
 void main() {
   testWidgets('Empty Test', (WidgetTester tester) async {});
+
+  test('Empty test just for create cov folder', () {
+    bool foo = true;
+    expect(foo, isTrue);
+  });
 }
