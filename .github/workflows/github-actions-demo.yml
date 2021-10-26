@@ -8,6 +8,24 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Set up Java
+        uses: actions/setup-java@v2
+        with:
+          java-version: "15"
+          distribution: "adopt"
+
+      - name: Set up Flutter
+        uses: subosito/flutter-action@v1
+        with:
+          flutter-version: "2.5.2"
+          channel: "stable"
+
+      - name: Install pub Dependencies
+        run: flutter pub get
+
       - name: Run Tests
         run: flutter test
 
